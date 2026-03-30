@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        overflow: hidden;
+        text-align: center;
+        color: white;
+    }
+
+    h1 {
+        margin-top: 100px;
+        font-size: 40px;
+        animation: fadeIn 3s ease-in-out;
+    }
+
+    p {
+        font-size: 18px;
+        animation: fadeIn 5s ease-in-out;
+        padding: 0 20px;
+    }
+
+    .btn {
+        margin-top: 30px;
+        padding: 15px 30px;
+        background: white;
+        color: #ff6f91;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .game {
+        display: none;
+        margin-top: 50px;
+    }
+
+    .box {
+        width: 80px;
+        height: 80px;
+        background: white;
+        margin: 10px;
+        display: inline-block;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+</style>
+</head>
+
+<body>
+
+<h1>🎉 HAPPY BIRTHDAY KEKEII 🎉</h1>
+
+<p id="text">
+Semoga panjang umur, sehat selalu 🤍<br>
+I hope all your dreams come true and all your problems are solved.<br><br>
+
+Aku mungkin cuma teman, tapi aku selalu peduli sama kamu.<br>
+Kamu itu orang yang spesial, jangan pernah ngerasa sendirian ya ✨
+</p>
+
+<button class="btn" onclick="startGame()">Klik disini 🎁</button>
+
+<div class="game" id="game">
+    <p>Pilih kotak yang benar ya 👀</p>
+    <div class="box" onclick="checkBox(1)"></div>
+    <div class="box" onclick="checkBox(2)"></div>
+    <div class="box" onclick="checkBox(3)"></div>
+</div>
+
+<script>
+function startGame() {
+    document.getElementById("game").style.display = "block";
+}
+
+function checkBox(num) {
+    if(num === 2){
+        alert("🎉 Selamat! 🎉\n\nAku selalu ada buat kamu.\nStay strong ya 🤍");
+    } else {
+        alert("Upss salah 😆 coba lagi ya!");
+    }
+}
+</script>
+
+</body>
+</html>
